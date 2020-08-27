@@ -2,10 +2,11 @@ package com.universe;
 
 import com.universe.antlrdemo.cal.CalBaseVisitor;
 import com.universe.antlrdemo.cal.CalParser;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.Map;
-
+@Slf4j
 public class EvalVisitor extends CalBaseVisitor<Double> {
   private Map<String,Double> table;
 
@@ -20,9 +21,9 @@ public class EvalVisitor extends CalBaseVisitor<Double> {
       int index=str.indexOf('.');
       //check if it is an integer
       if(str.substring(index+1).equals("0")) {
-          System.out.println(str.substring(0, index));
+          log.info(str.substring(0, index));
       } else {
-          System.out.println(str);
+          log.info(str);
       }
       return null;
   }

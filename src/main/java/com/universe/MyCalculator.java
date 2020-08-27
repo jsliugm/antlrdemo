@@ -3,15 +3,17 @@ package com.universe;
 import com.universe.antlrdemo.cal.CalLexer;
 import com.universe.antlrdemo.cal.CalParser;
 import com.universe.utils.CodeDialog;
+import lombok.extern.slf4j.Slf4j;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.StringReader;
-
+@Slf4j
 public class MyCalculator {
     public static void main(String[] args) throws IOException {
+        log.info("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         CodeDialog codeDialog = new CodeDialog();
         String xxx = codeDialog.showDialog();
         System.out.println(xxx);
